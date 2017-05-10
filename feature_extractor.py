@@ -68,7 +68,7 @@ def extract_features(plot_landmarks = False):
 	if plot_landmarks:
 		if not os.path.exists('landmarks'):
 			os.mkdir('landmarks')
-	import pdb; pdb.set_trace()
+	
 	# locate landmarks and put them in a list
 	for subject in image_paths:
 		landmarks.append([])
