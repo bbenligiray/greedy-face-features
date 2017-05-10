@@ -20,7 +20,7 @@ def sequential_forward_selection(data, labels):
 			feats_test[ind1] = True
 			feats_test[ind2] = True
 
-			acc, _, _ = test_features(data, labels, feats_test)
+			acc = test_features(data, labels, feats_test)
 		
 			if acc > acc_best:
 				acc_best = acc
@@ -40,7 +40,7 @@ def sequential_forward_selection(data, labels):
 			feats_test = np.copy(feats_best)
 			feats_test[ind] = True
 
-			acc, _, _ = test_features(data, labels, feats_test)
+			acc = test_features(data, labels, feats_test)
 
 			if acc > acc_best_in_search:
 				acc_best_in_search = acc
@@ -64,27 +64,13 @@ def use_features_for_classification(data, labels, feats_test):
 	
 # trains and tests an SVM
 def test_features(data, labels, feats_test):
-	return calculate_mean_class_accuracy(use_features_for_classification(data, labels, feats_test))
-	
-# calculates the mean of accuracies for each class
-def calculate_mean_class_accuracy(labels, preds):
-	labels = (np.round(labels)).astype(int)
-	preds = (np.round(preds)).astype(int)
-	
-	class_tot = np.zeros(metadata.no_classes)
-	class_corr = np.zeros(metadata.no_classes)
 
-	for ind, pred in enumerate(preds):
-		class_tot[labels[ind] - 1] += 1
-		if labels[ind] == preds[ind]:
-			class_corr[labels[ind] - 1] += 1
-	
-	class_accs = []
-	for ind_class in range(metadata.no_classes):
-		if class_tot[ind_class] > 0:
-			class_accs.append(class_corr[ind_class] / class_tot[ind_class])
-	
-	return np.mean(class_accs), class_tot, class_corr
+	labels_true, labels_pred = use_features_for_classification(data, labels, feats_test)
+	conf_matrix = confusion_matrix(labels_true, labels_pred)
+	conf_matrix = conf_matrix.astype(float)
+	mean_class_accuracy = np.mean(np.diagonal(conf_matrix) / np.sum(conf_matrix, axis = 1))
+
+	return mean_class_accuracy
 	
 def evaluate_final_feature_selection(data_list, labels_list, feats_best):
 	# create a generator that segments the dataset in leave-one-subject-out fashion
