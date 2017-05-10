@@ -1,0 +1,7 @@
+cohn-kanade-images/
+Emotion/
+landmarks/
+
+*.zip
+*.bz2
+*.pyc
