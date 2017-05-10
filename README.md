@@ -19,7 +19,8 @@ This program extracts landmarks from the CK+ dataset, selects the most descripti
 Entering the following to the terminal works for a clean install of Ubuntu 16.04.
 You will need internet connection to download the required packages.
 
-```$ cd /path/to/file
+```
+$ cd /path/to/file
 $ chmod +x setup.sh
 $ ./setup.sh
 $ python main.py
