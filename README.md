@@ -4,7 +4,7 @@ My implementation of the following paper:
 
 [Gacav, C.; Benligiray, B.; Topal, C., "Greedy search for descriptive spatial face features," International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2017.](https://arxiv.org/abs/1701.01879)
 
-*Note: The original paper was implemented in C++ by Caner Gacav.
+*Note: The original paper was implemented in by Caner Gacav in C++.
 I reproduced the results in python without referring to the original code.
 The original code used dlib for SVM, this one uses scikit-learn.*
 
