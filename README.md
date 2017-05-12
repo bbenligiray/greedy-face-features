@@ -33,4 +33,4 @@ If you want to extract the features yourself, you need to download `Emotion_labe
 
 Then, you will be asked if you want to do the feature selection, or use the example selection result that I have provided.
 Feature selection is not a deterministic process, so the final result will not be the same every time.
-Overall, the results seem to be about 2% higher than what we have reported in the paper.
+Overall, the results seem to be about 2-4% higher than what we have reported in the paper.
