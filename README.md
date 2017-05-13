@@ -11,10 +11,10 @@ The results seem to be about 2-4% higher than what we have reported in the paper
 
 #### What is this?
 
-Facial landmarks are commonly used for emotion recognition.
+Features extracted from facial landmarks are commonly used for emotion recognition.
 However, there are a lot of them, and some are not very descriptive.
-This program extracts landmarks from the CK+ dataset, selects the most descriptive ones, and tests this selection.
-In the figure below, you can see an example subset.
+This program extracts spatial features from the CK+ dataset, finds a highly descriptive subset, and tests this selection.
+You can see an example subset in the figure below.
 The changes in the indicated vertical or horizontal distances are the selected spatial features.
 
 <p align="center">
@@ -38,5 +38,5 @@ $ python main.py
 You will be asked if you want to extract the features from images, or load the ones I have provided.
 If you want to extract the features yourself, you need to download `Emotion_labels.zip` and `extended-cohn-kanade-images.zip` from [the CK+ dataset page](http://www.consortium.ri.cmu.edu/ckagree/), and put them in the project directory.
 
-Then, you will be asked if you want to do the feature selection, or use the example selection result that I have provided.
+Then, you will be asked if you want to run the feature selection, or use the provided example selection.
 Feature selection is not a deterministic process, so the final result will not be the same every time.
