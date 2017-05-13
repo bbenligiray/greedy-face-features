@@ -6,7 +6,8 @@ My implementation of the following paper:
 
 *Note: The original paper was implemented in by Caner Gacav in C++.
 I reproduced the results in python without referring to the original code.
-The original code used dlib for SVM, this one uses scikit-learn.*
+The original code used dlib for SVM, this one uses scikit-learn.
+The results seem to be about 2-4% higher than what we have reported in the paper, probably because of the difference in SVM parameters.*
 
 #### What is this?
 
@@ -17,7 +18,7 @@ This program extracts landmarks from the CK+ dataset, selects the most descripti
 #### How to run?
 
 Entering the following to the terminal works for a clean install of Ubuntu 16.04.
-You will need internet connection to download the required packages.
+You will need Internet connection to download the required packages.
 
 ```
 $ cd /path/to/file
@@ -33,4 +34,3 @@ If you want to extract the features yourself, you need to download `Emotion_labe
 
 Then, you will be asked if you want to do the feature selection, or use the example selection result that I have provided.
 Feature selection is not a deterministic process, so the final result will not be the same every time.
-Overall, the results seem to be about 2-4% higher than what we have reported in the paper.
