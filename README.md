@@ -7,7 +7,7 @@ My implementation of the following paper:
 *Note: The original paper was implemented by Caner Gacav in C++.
 I reproduced the results in python without referring to the original code.
 The original code used dlib for SVM, this one uses scikit-learn.
-The results seem to be about 2-4% higher than what we have reported in the paper, probably because of the difference in SVM parameters.*
+The results seem to be about 2-4% higher than what we have reported in the paper, probably because of the difference in SVM parameters/implementation.*
 
 #### What is this?
 
