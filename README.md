@@ -14,6 +14,12 @@ The results seem to be about 2-4% higher than what we have reported in the paper
 Facial landmarks are commonly used for emotion recognition.
 However, there are a lot of them, and some are not very descriptive.
 This program extracts landmarks from the CK+ dataset, selects the most descriptive ones, and tests this selection.
+In the figure below, you can see an example subset.
+The changes in the indicated vertical or horizontal distances are the selected spatial features.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/19530665/26025346/2287308a-37ee-11e7-84c0-311a67de3465.png"/>
+</p>
 
 #### How to run?
 
