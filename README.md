@@ -11,11 +11,12 @@ The results seem to be about 2-4% higher than what we have reported in the paper
 
 #### What is this?
 
-Features extracted from facial landmarks are commonly used for emotion recognition.
-However, there are a lot of them, and some are not very descriptive.
-This program extracts spatial features from the CK+ dataset, finds a highly descriptive subset, and tests this selection.
-You can see an example subset in the figure below.
-The changes in the indicated vertical or horizontal distances are the selected spatial features.
+* Spatial features are derived from displacements of facial landmarks. They are a kind of geometric feature that can be used for facial expression recognition.
+* A large number of spatial features can be extracted from a face, but they are not all equally descriptive.
+* In the face expression recognition literature, geometric features are hand-picked, dimension-reduced or used as is, with the redundancy.
+* In this study, we use sequential forward selection to obtain a small subset of spatial features that describes the facial expressions well.
+* In the figure below, you see an example subset. The changes in the indicated vertical or horizontal distances are the selected spatial features.
+* The proposed method delivers 88.7% recognition accuracy in the CK+ dataset, which is the highest performance among the methods that only use geometric features.
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/19530665/26025346/2287308a-37ee-11e7-84c0-311a67de3465.png"/>
