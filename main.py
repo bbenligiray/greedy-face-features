@@ -18,13 +18,13 @@ no_class = 7
 # each subject has a list of emotions
 # each emotion has a spatial feature vector of length 4556
 def load_features():
-	with open('ck+preprocessed.pickle', 'rb') as f:
+	with open('ck+preprocessed.p', 'rb') as f:
 		d = pickle.load(f)
 	return d['spatial_features'], d['labels']
 
 def write_features(landmarks, labels, spatial_features):
 	d = {'landmarks': landmarks, 'labels': labels, 'spatial_features': spatial_features}
-	with open('ck+preprocessed.pickle', 'wb') as f:
+	with open('ck+preprocessed.p', 'wb') as f:
 		pickle.dump(d, f, protocol = pickle.HIGHEST_PROTOCOL)
 
 def main():
@@ -106,8 +106,8 @@ def main():
 		labels_list = labels
 		
 	else:
-		if not os.path.isfile('ck+preprocessed.pickle'):
-			raise FileNotFoundError('ck+preprocessed.pickle not found. Need to extract landmarks.')
+		if not os.path.isfile('ck+preprocessed.p'):
+			raise FileNotFoundError('ck+preprocessed.p not found. Need to extract landmarks.')
 		data_list, labels_list = load_features()
 	
 
